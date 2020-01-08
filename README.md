@@ -48,3 +48,7 @@ The product inventory is a single page application that lets you add new product
 
 - **Delete product**
     - Delete a product in the database
+
+## Project Screenshot
+
+![Shreenshot](https://github.com/shrutikhandekar1/ProductInventoryApp/blob/master/ProductImage.png)
