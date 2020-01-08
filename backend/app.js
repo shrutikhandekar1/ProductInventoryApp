@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const HttpError = require('./models/http-error');
 const mongoose = require('mongoose');
 var cors = require('CORS');
-
-
+const dotenv = require('dotenv').config();
 
 const productRoutes = require('./routes/product-routes');
 
@@ -43,6 +42,7 @@ app.use((error, req, res, next) => {
     res.json({message:error.message || 'An unknown error occured'});
 })
 
-mongoose.connect('mongodb+srv://Shruti:Shr1jay20ee@nodeproject-otgtx.mongodb.net/Products_database?retryWrites=true&w=majority').
+
+mongoose.connect(process.env.MONGODB_URI).
 then(() => {app.listen(5000)}).
 catch(err => { console.log(err)});
