@@ -143,7 +143,7 @@ class Products extends Component {
     render () {
         return (
             <div>
-                <h1>My Inventory</h1>
+                <h1>Product Inventory</h1>
                 <Filters 
                     onFilter={this.handleFilter}></Filters>
                 <ProductTable 

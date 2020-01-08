@@ -140,7 +140,8 @@ class ProductForm extends Component {
                 </p>
                 <p>
                     <label>Price <br /> 
-                    <input type="text" className="form-control" name="price" onChange={this.handleChange} ref={(input)=>{this.price = input}} value={this.state.product.price} required/></label>
+                    <span className="form-control" id="dollar-sign">$</span><input type="text" className="form-control" name="price" onChange={this.handleChange} ref={(input)=>{this.price = input}} value={this.state.product.price} required/>
+                    </label>
                 </p>
                 <p>Is product in Stock? </p>
                     <input type="radio"  name="instock" onChange={this.handleChange} ref={(input)=>{this.inStockTrue = input}} value="true" />True<br/>

@@ -5,3 +5,13 @@ body {
 form:nth-of-type(1) {
   margin: 20px 0;
 }
+
+label{
+  position: relative;
+}
+#dollar-sign{
+  position: absolute;
+  width: 20px;
+  border-right: 0px;
+  border-radius: 5px 0px 0px 5px;
+}
