@@ -2,9 +2,10 @@
   "name": "assignment13",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/shrutikhandekar1/ProductInventoryApp",
+  "homepage": "https://shrutikhandekar1.github.io/ProductInventoryApp/",
   "dependencies": {
     "cors": "^2.8.5",
+    "gh-pages": "^2.2.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
