@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const HttpError = require('./models/http-error');
 const mongoose = require('mongoose');
-var cors = require('CORS');
+const cors = require('cors');
 const dotenv = require('dotenv').config();
 
 const productRoutes = require('./routes/product-routes');
