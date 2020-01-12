@@ -5,12 +5,12 @@
   "engines": {
     "node": "12.13.1"
   },
-  "main": "backend/app.js",
+  "main": "./backend/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "node ./backend/app.js",
     "client-install": "npm install --prefix client",
-    "server": "nodemon app.js",
+    "server": "nodemon ./backend/app.js",
     "client": "npm start --prefix client", 
     "dev": "concurrently \"npm run server\" \"npm run client\""
      
