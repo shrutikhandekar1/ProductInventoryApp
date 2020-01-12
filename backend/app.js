@@ -46,6 +46,6 @@ app.use((error, req, res, next) => {
 })
 
 
-mongoose.connect(MongoURI).
+mongoose.connect(MongoURI,{ useNewUrlParser: true }).
 then(() => {app.listen(port)}).
 catch(err => { console.log(err)});
