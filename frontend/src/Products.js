@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Filters from './Filters'
 import ProductTable from './ProductTable'
 import ProductForm from './ProductForm'
+import dotenv from 'dotenv'
+dotenv.config()
+
 
 
 // let PRODUCTS = {
@@ -34,7 +37,7 @@ class Products extends Component {
 
     handleDestroy = async (productId) => {
         try {
-            const response = await fetch('http://localhost:5000/products/delete/' + productId, {
+            const response = await fetch(`/products/delete/` + productId, {
                 method: 'DELETE',
                 headers: {
                 'Content-Type': 'application/json'
@@ -68,7 +71,7 @@ class Products extends Component {
 
 
     loadData () {
-        fetch('http://localhost:5000/products/get')
+        fetch(`/products/get`)
             .then((resp) => resp.json())
             .then((data) => {
                   let newProductArray = [];
@@ -96,7 +99,7 @@ class Products extends Component {
         //console.log( this.state.product.category, this.state.product.instock);
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/products/create', {
+            const response = await fetch('/products/create', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
@@ -115,7 +118,7 @@ class Products extends Component {
             const responseData = await response.json();
             console.log(responseData);
 
-            fetch('http://localhost:5000/products/get')
+            fetch('/products/get')
             .then((resp) => resp.json())
             .then((data) => {
                   let newProductArray = [];

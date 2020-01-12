@@ -9,6 +9,8 @@ const productRoutes = require('./routes/product-routes');
 
 const app = express();
 
+const MongoURI = process.env.MONGODB_URI;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -43,6 +45,6 @@ app.use((error, req, res, next) => {
 })
 
 
-mongoose.connect(process.env.MONGODB_URI).
-then(() => {app.listen(5000)}).
+mongoose.connect(MongoURI).
+then(() => {app.listen(port)}).
 catch(err => { console.log(err)});
