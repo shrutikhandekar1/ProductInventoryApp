@@ -47,6 +47,6 @@ app.use((error, req, res, next) => {
 })
 
 
-mongoose.connect(MongoURI,{ useNewUrlParser: true }).
+mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true }).
 then(() => {app.listen(port)}).
 catch(err => { console.log(err)});
